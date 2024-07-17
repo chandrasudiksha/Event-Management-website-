@@ -1,0 +1,412 @@
+body {
+    margin-top:0;
+    padding:0;
+    display: grid !important;
+    justify-content:center !important;
+    align-items: center !important;
+    height:100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  #home{
+    width: 100%;
+  }
+  #home nav{
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+  #home ul{
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  #home ul li{
+    list-style:none;
+    margin:0 20px;
+    transition:0.5s;
+  }
+  
+  #home ul li a{
+    display: block;
+    position:relative;
+    text-decoration:none;
+    padding:5px;
+    font-size:18px;
+    font-family: sans-serif;
+    color:#fff;
+    text-transform:uppercase;
+    transition:0.5s;
+  }
+ 
+  #home ul:hover li a{
+    transform:scale(1.5);
+    opacity:0.2;
+    filter:blur(5px);
+  }
+  
+  #home ul li a:hover{
+    transform:scale(2);
+    opacity:1;
+    filter:blur(0);
+    text-decoration:none;
+    color:#fff;
+  }
+  
+  #home ul li a:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+    transform-origin:right;
+    transform:scaleX(0);
+    z-index:-1;
+  }
+  
+  #home ul li a:hover:before{
+    transition:transform 0.5s;
+    transform-origin:left;
+    transform:scaleX(1);
+  }
+
+  #home .btn {
+    width: 35%;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ecf0f1;
+    border-radius: 3px;
+    font-size: 1.0em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  
+  #home .btn:hover {
+    background-color: rgba(22, 160, 133, .7);
+  }
+  
+  #home .card1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  
+  #home .icon-cog {
+    color: white;
+  }
+  
+  #home .fa-cog {
+    color: white;
+  }
+  
+  #home .btnm {
+    width: 35%;
+    padding: 5px 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ecf0f1;
+    border-radius: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  
+  #home .btnm:hover {
+    background-color: rgba(22, 160, 133, .7);
+  }
+  
+  /* Here Is The CSS For The Background*/
+  
+  /* An Overlay To Dim The Image And Make Text Readable*/
+  #color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #34495e, #2c3e50);
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  /* Setup For An Image That Fits On Most Screens And Resizes*/
+  .with-bg-size {
+    background-image: url("https://wallpapercave.com/wp/wp7488228.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+    
+    -webkit-animation: back 10s infinite; /* Safari 4+ */
+    -moz-animation:    back 10s infinite; /* Fx 5+ */
+    -o-animation:      back 10s infinite; /* Opera 12+ */
+    animation:         back 10s infinite; /* IE 10+, Fx 29+ */
+    
+    
+  }
+  /* The Keyframes*/
+  @keyframes back {
+    25% {
+      background-image: url("https://e1.pxfuel.com/desktop-wallpaper/177/713/desktop-wallpaper-event-management.jpg");
+      
+    }
+    50% {
+      background-image: url("https://media-api.xogrp.com/images/0ce7a652-6e43-436b-abf4-fc988c7416d3~sc_450.250");
+    }
+    
+    75%{
+      background-image: url("https://cdn0.weddingwire.com/vendor/028461/3_2/640/jpg/08-2-fc8a6110-edited_51_164820-171951009137078.jpeg");
+    }
+    
+  /* Animation Does Not End At 100% Because It Makes The Images Transition In/Out Better For Some Reason*/
+  }
+
+  #service{
+    margin-top: 550px !important;
+    padding-top: 50px;
+    color: white;
+  }
+  #gallery{
+    padding-top: 50px;
+    color: white;
+  }
+  #event{
+    padding-top: 50px;
+  }
+ .service-block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ 
+.service-block {
+    min-width: 180px;
+    width: 180px;
+    height: 200px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 0 10px;
+ }
+ 
+ .service-underlay {
+    position: absolute;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 18px;
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ .service-icon {
+    position: absolute;
+    top: 30px;
+    left:0; 
+    right: 0;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+ }
+ .service-name {
+    margin: 0 auto;
+    display: block;
+    text-transform: Capitalize;
+ }
+ 
+.service-desc {
+    display: block;
+    font-size: 12px;
+    margin-top: 75px;
+ }
+ 
+ .service-underlay .cta {
+    margin-top: 115px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+ }
+ 
+ .service-block:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 1px solid #a149c4;
+ }
+ 
+.service-block:hover .service-underlay {
+    height: 200px;
+    background-color: #a149c4;
+ }
+ 
+.service-block:hover .service-icon {
+    color: #fff;
+    transform: scale(1.5);
+    top: 80px;
+ }
+ 
+  .service-block:hover .service-name {
+    color: #fff;
+    font-weight: bold;
+ }
+ 
+  .service-block:hover .service-desc {
+    display: none;
+ }
+ 
+ .service-block .service-underlay .cta:hover {
+    text-decoration: none;
+ }
+ 
+
+ 
+
+
+@media (min-width: 768px) {
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      align-content: flex-start;
+    }
+    .navbar__links i {
+      margin: 0px;
+      color: #c8882d;
+      font-size: 25px;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      color: #c8882d;
+      font-size: 25px;
+      font-family: Lora;
+    }
+  }
+  
+  /*Animation of the title*/
+  
+  @keyframes titleIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    70% {
+      transform: translateX(150px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+ 
+  
+
+  
+  #gallery ul {
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  #gallery a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #c8882d;
+    font-size: 18px;
+    font-family: Lora;
+  }
+  
+  #gallery a:hover {
+    border-bottom: 1px #20263f solid;
+  }
+  
+
+  
+  /* Title Format */
+  #gallery h1 {
+    color: #ffffff;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    display: block;
+  }
+  #gallery .title {
+    text-align: left;
+    justify-content: left;
+    width: 100%;
+    height: 75px;
+    margin-bottom: 30px;
+    animation-name: titleIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  
+  #gallery .container1 {
+    display: grid;
+     grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+   
+  }
+  
+  #gallery .container1 > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #gallery .description {
+    display: none;
+    position: absolute;
+  }
+  
+  #gallery img {
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  #gallery .container1 > div:hover {
+    transform: scale(1.1);
+  }
+  #gallery .container1 > div:hover .description {
+    display: block;
+    text-align: center;
+  }
+  
+  #gallery .container1 > div:hover img {
+    opacity: 0.7;
+  }
+  #gallery .container1 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #20263f;
+  }
