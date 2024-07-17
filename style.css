@@ -9,6 +9,9 @@ body {
   }
   #home{
     width: 100%;
+    display: flex; 
+    flex-wrap: wrap; 
+    min-height: 100vh;
   }
   #home nav{
     margin-top: 50px;
@@ -411,7 +414,6 @@ body {
   }
 
 #about{
-    margin-top: 530px !important;
     color: white !important;
     background-color: none;
 }
